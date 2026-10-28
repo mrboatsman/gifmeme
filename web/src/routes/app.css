@@ -1,0 +1,125 @@
+:root {
+	--bg: #f6f5fa;
+	--surface: #ffffff;
+	--surface-2: #f0eef7;
+	--border: #e2dfec;
+	--text: #1d1a29;
+	--muted: #6d6880;
+	--accent: #7c3aed;
+	--accent-text: #ffffff;
+	--ok: #15803d;
+	--warn: #b45309;
+	--bad: #dc2626;
+	--radius: 12px;
+	color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #121019;
+		--surface: #1b1824;
+		--surface-2: #252131;
+		--border: #332e42;
+		--text: #ebe8f4;
+		--muted: #9d97b0;
+		--accent: #a78bfa;
+		--accent-text: #160f29;
+		--ok: #4ade80;
+		--warn: #fbbf24;
+		--bad: #f87171;
+	}
+}
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-family:
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		sans-serif;
+	line-height: 1.45;
+}
+a {
+	color: var(--accent);
+}
+h1 {
+	font-size: 1.6rem;
+	margin: 0 0 1rem;
+}
+h2 {
+	font-size: 1.15rem;
+}
+input,
+select,
+textarea {
+	font: inherit;
+	color: inherit;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 0.5rem 0.65rem;
+}
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 2px solid var(--accent);
+	outline-offset: -1px;
+}
+button {
+	font: inherit;
+	cursor: pointer;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	background: var(--surface-2);
+	color: var(--text);
+	padding: 0.45rem 0.9rem;
+}
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+a.button {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 8px;
+	padding: 0.55rem 0.9rem;
+}
+a.button.primary,
+button.primary {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--accent-text);
+	font-weight: 600;
+}
+button.danger {
+	color: var(--bad);
+}
+button.ghost {
+	background: transparent;
+	border-color: transparent;
+	color: var(--muted);
+}
+.card {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 1.25rem;
+}
+.muted {
+	color: var(--muted);
+}
+.error {
+	color: var(--bad);
+}
+code {
+	background: var(--surface-2);
+	border-radius: 4px;
+	padding: 0.05rem 0.3rem;
+	font-size: 0.9em;
+}
